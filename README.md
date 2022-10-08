@@ -128,8 +128,6 @@ Here's the step to install the application into your local device
 - [ ] User's Phonebook
 - [ ] Email reminder
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -148,23 +146,12 @@ Use this space to list resources you find helpful and would like to give credit 
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
 
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
 
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React.js]: https://img.shields.io/badge/React-latest-cyan
 [React-url]: https://reactjs.org/
-[Node.js]: https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png
+[Node.js]: https://img.shields.io/badge/Node-latest-green
 [Node-url]: https://nodejs.org/en/
-[TailwindCSS]: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/600px-Tailwind_CSS_Logo.svg.png?20211001194333
+[TailwindCSS]: https://img.shields.io/badge/TailwindCSS-latest-cyan
 [Tailwind-url]: https://tailwindcss.com/
