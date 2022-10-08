@@ -130,7 +130,9 @@ Here's the step to install the application into your local device
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] UI/UX Design
+- [x] UI/UX Design
+- [x] Data Structure Design
+- [ ] bit.io database integration
 - [ ] User Account Feature
 - [ ] User's Dashboard Feature
 - [ ] User's Phonebook
