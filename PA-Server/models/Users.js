@@ -22,4 +22,21 @@ module.exports = class User {
         })
     };
 
+    static create(userData){
+        return new Promise (async (resolve, reject) => {
+            try {
+                console.log('create user')
+                const { username, password, email} = userData;
+                let newUser = await db.query('INSERT INTO users (username, password, email) VALUES ($1,$2,$3) RETURNING *;',[username, password, email]);
+                let result = new User(newUser.rows[0]);
+                console.log('created')
+                resolve (result);
+                
+            } catch (err) {
+                console.log(err);
+                reject('User could not be created');
+            }
+        });
+    };
+
 }
