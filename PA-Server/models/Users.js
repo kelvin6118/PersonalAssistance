@@ -39,4 +39,16 @@ module.exports = class User {
         });
     };
 
+    static findByUser(username){
+        return new Promise (async (resolve, reject) => {
+            try {
+                const result = await db.query('SELECT * FROM users WHERE username = $1;', [ username ]);
+                let user = new User(result.rows[0]);
+                resolve(user);
+            } catch (err) {
+                reject('User not found!');
+            }
+        })
+    }
+
 }
