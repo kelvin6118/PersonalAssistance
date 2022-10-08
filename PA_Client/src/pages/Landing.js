@@ -26,7 +26,14 @@ function Landing() {
             username: loginUser,
             password: loginPass
         }
-        console.log(userLogin(User));
+        
+        userLogin(User).then((response) => {
+            if(response.auth){
+                console.log("You've logged in", response);
+            }else{
+                console.log("Wrong username or password")
+            }
+        })
     }
 
     return (
