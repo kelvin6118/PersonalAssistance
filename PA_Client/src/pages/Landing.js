@@ -29,6 +29,7 @@ function Landing() {
         
         userLogin(User).then((response) => {
             if(response.auth){
+                localStorage.setItem("token", "Bearer " + response.token);
                 console.log("You've logged in", response);
             }else{
                 console.log("Wrong username or password")

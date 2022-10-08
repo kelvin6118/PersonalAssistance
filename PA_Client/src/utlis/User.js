@@ -21,3 +21,9 @@ export const userLogin = async (user) => {
     const data = await response.json();
     return data;
 }
+
+//header for jwt
+const headers = {
+    "Content-Type": "application/json",
+    "x-access-token": localStorage.getItem("token")
+}
