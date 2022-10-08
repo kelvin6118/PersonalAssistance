@@ -60,7 +60,13 @@ Here's why:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+##Design
+UI wireframe: https://www.figma.com/file/VEoJmniVUr5tchMLLYgjr9/Untitled?node-id=0%3A1
+<br>
+UX journey: 
+<br>
+Data Structure:
+<br>
 
 ### Built With
 
