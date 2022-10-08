@@ -7,7 +7,7 @@ async function display(req, res) {
         const users = await User.all;
         res.status(200).send(users);
     } catch (err) {
-        res.status(500).send(err);
+        res.status(500).json({err});
     }
 }
 
@@ -23,15 +23,14 @@ async function registerRequest(req, res){
         });
         res.status(201).send(user)
     } catch (err) {
-        res.status(422).send({err})
+        res.status(422).json({message: "unable to register"})
     }
 }
 
 async function loginRequest(req, res) {
     try {
-        console.log("loggin");
         const user = await User.findByUser(req.body.username);
-        if(!user){ throw new Error('No user with this username')};
+        if(!user){ throw new Error('User could not be authenticated')};
         const authed = await bcrypt.compare(req.body.password, user.password)
 
         if (!!authed){
@@ -40,7 +39,6 @@ async function loginRequest(req, res) {
             const token = jwt.sign({id}, secret, {
                 expiresIn: 300,
             })
-            console.log('logged in');
 
             res.status(200).send({
                 auth: true,
@@ -55,7 +53,7 @@ async function loginRequest(req, res) {
         }
 
     } catch (err) {
-            res.status(401).send({ err })
+            res.status(401).json({auth: false, message: "User could not be authenticated"})
         }
 }
 
