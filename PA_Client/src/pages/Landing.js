@@ -26,7 +26,7 @@ function Landing() {
             username: loginUser,
             password: loginPass
         }
-        userLogin(User);
+        console.log(userLogin(User));
     }
 
     return (
