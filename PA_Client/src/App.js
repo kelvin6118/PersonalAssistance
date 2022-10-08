@@ -1,11 +1,10 @@
 import logo from './logo.svg';
+import Landing from './pages/Landing';
 
 function App() {
   return (
     <div className="App ">
-      <p className='text-2xl p-10'>
-        Hello
-      </p>
+      <Landing/>
     </div>
   );
 }
