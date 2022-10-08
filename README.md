@@ -65,7 +65,7 @@ Here's why:
 
 UI wireframe: https://www.figma.com/file/VEoJmniVUr5tchMLLYgjr9/Untitled?node-id=0%3A1
 <br>
-UX journey: 
+UX journey: https://excalidraw.com/#json=iJP-l9qgjK0ybT_mjkDES,OsKZPH5E9X0ZZUF5ND4C1g
 <br>
 Data Structure:
 <br>
