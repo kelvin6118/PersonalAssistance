@@ -67,7 +67,7 @@ UI wireframe: https://www.figma.com/file/VEoJmniVUr5tchMLLYgjr9/Untitled?node-id
 <br>
 UX journey: https://excalidraw.com/#json=iJP-l9qgjK0ybT_mjkDES,OsKZPH5E9X0ZZUF5ND4C1g
 <br>
-Data Structure:
+Data Structure: https://excalidraw.com/#json=9jlRitAi5Ql5DS_oPoduU,4t3l3_5Vw6UXLjOJhl3biA
 <br>
 
 ### Built With
