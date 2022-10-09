@@ -99,9 +99,27 @@ What you need before installing the application.
 Here's the step to install the application into your local device
 
 
-Clone the repo
+  Clone the repo
    ```sh
    git clone git@github.com:kelvin6118/PersonalAssistance.git
+   ```
+   Client:
+1. Get to the client folder
+   ```sh
+   cd PA_Client
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run with NPM command
+   ```sh
+   npm start
+   ```
+   Server:
+1. Get to the server folder
+   ```sh
+   cd PA-Server
    ```
 2. Install NPM packages
    ```sh
