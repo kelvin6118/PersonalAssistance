@@ -20,8 +20,9 @@ function Landing() {
         
         dispatch(Login(User)).then((response) => {
             if(response.payload.auth){
-                localStorage.setItem("token", "Bearer " + response.token);
-                //navigate('/dashboard');
+                localStorage.setItem("token", "Bearer " + response.payload.token);
+                console.log(response.payload);
+                navigate('/dashboard');
             }
         }).catch((err)=>{
             console.log('wrong user or password');

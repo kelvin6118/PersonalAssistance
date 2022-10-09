@@ -7,7 +7,7 @@ import DashBoard from './pages/DashBoard';
 import Page401 from './pages/Page401';
 
 function App() {
-  const auth = useSelector((state) => state.auth);
+  const auth = useSelector((state) => state.login.auth);
 
   return (
     <div className="App ">
