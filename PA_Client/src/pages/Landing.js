@@ -1,24 +1,10 @@
 import React, {useState} from 'react'
-import { registerUser , userLogin} from '../utlis/User';
+import { NavLink } from 'react-router-dom';
+import { userLogin} from '../utlis/User';
 
 function Landing() {
-    const [createUser, setCreateUser] = useState();
-    const [createPass, setCreatePass] = useState();
-    const [createEmail, setCreateEmail] = useState(null);
     const [loginUser, setLoginUser] = useState();
     const [loginPass, setLoginPass] = useState(); 
-
-
-    const handleRegisterSubmit = async (e) => {
-        e.preventDefault();
-        const User = {
-            username: createUser,
-            password: createPass,
-            email: createEmail
-        }
-        console.log(User);
-        registerUser(User);
-    }
 
     const handleLoginSubmit= async (e) => {
         e.preventDefault();
@@ -38,73 +24,45 @@ function Landing() {
     }
 
     return (
-        <div>
-        <div id='register'>
-            <h3>
-                create account
-            </h3>
-            <form
-            onSubmit={handleRegisterSubmit}
-            >
-                <label>Username</label>
-                <input 
-                type="text"
-                maxLength={50}
-                placeholder='Username'
-                required={true}
-                onChange={(e)=>setCreateUser(e.target.value)}
-                />
-                <label>Password</label>
-                <input 
-                type="text"
-                maxLength={50}
-                placeholder='Password'
-                required={true}
-                onChange={(e)=>setCreatePass(e.target.value)}
-                />
-                <label>Email</label>
-                <input 
-                type="email"
-                maxLength={50}
-                placeholder='Email'
-                onChange={(e)=>setCreateEmail(e.target.value)}
-                />
-                <button 
-                
-                type='submit'>
-                    Register
-                </button>
-
-                </form>
+        <dix className='w-screen flex justify-center '>
+            <div className='w-fit h-screen flex flex-col justify-center '>
+                <h1 className='w-fit text-2xl bg-cyan-300 p-5'>Welcome To Personal Assistant</h1>
+                <div className='w-full p-3 bg-teal-300'>
+                    <form 
+                    className='flex flex-col p-2 space-y-4 '
+                    onSubmit={handleLoginSubmit}>
+                        <label>Username</label>
+                        <input 
+                        type="text"
+                        maxLength={50}
+                        placeholder='Username'
+                        required={true}
+                        onChange={(e)=>setLoginUser(e.target.value)}
+                        />
+                        <label>Password</label>
+                        <input 
+                        type="text"
+                        maxLength={50}
+                        placeholder='Password'
+                        required={true}
+                        onChange={(e)=>setLoginPass(e.target.value)}
+                        />
+                        <button 
+                        className='bg-teal-500'
+                        type='submit'>Login</button>
+                        </form>
+                        <div className='flex justify-between p-2'>
+                            <h3
+                            className=''
+                            >Not have an account yet?</h3>
+                            <NavLink
+                            to='/signup'
+                            className='bg-teal-500 p-1'
+                            >Sign up</NavLink>
+                        </div>
+                </div>
             </div>
-
-        <div id='login'>
-            <h3>
-                Login
-            </h3>
-            <form onSubmit={handleLoginSubmit}>
-                <label>Username</label>
-                <input 
-                type="text"
-                maxLength={50}
-                placeholder='Username'
-                required={true}
-                onChange={(e)=>setLoginUser(e.target.value)}
-                />
-                <label>Password</label>
-                <input 
-                type="text"
-                maxLength={50}
-                placeholder='Password'
-                required={true}
-                onChange={(e)=>setLoginPass(e.target.value)}
-                />
-                <button type='submit'>Login</button>
-                </form>
-                
-
-        </div>
-        </div>
+        </dix>
     )
 }
 
