@@ -117,7 +117,7 @@ Here's the step to install the application into your local device
    npm start
    ```
    <br>
-   Server:
+Server:
 1. Get to the server folder
    ```sh
    cd PA-Server
