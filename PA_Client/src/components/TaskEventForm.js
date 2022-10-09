@@ -28,7 +28,7 @@ const TaskEventForm = () => {
       >
         Create {type === "task"? <span>Task</span>: <span>Event</span>}</h1>
       <form 
-        className='w-full bg-teal-300 flex flex-col p-5 space-y-4 '
+        className='w-full rounded-b-2xl bg-teal-300 flex flex-col p-5 space-y-4 '
         onSubmit={handleLoginSubmit}>
           <label>Task or Event</label>
           <select onChange={(e)=>setType(e.target.value)}>
