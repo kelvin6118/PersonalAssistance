@@ -43,7 +43,7 @@ async function loginRequest(req, res) {
             res.status(200).send({
                 auth: true,
                 token: token,
-                userid: user.id,
+                userid: user.userid,
                 username: user.username,
                 email: user.email
             })
