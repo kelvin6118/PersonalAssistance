@@ -1,0 +1,4 @@
+09-10-2022
+Progress: Yesterday I've finished simple user authentication for the app
+Goal: Today I am going to finish the login and sign page. Unit test my current code. Posssibly Start working on the Dashboard.
+Blocker: Currently no blocker
