@@ -11,6 +11,7 @@ export const Login = createAsyncThunk(
 
 const initialState ={
     auth: false,
+    userid: null,
     username: null,
     email: null
 }
@@ -24,6 +25,7 @@ export const loginSlice = createSlice({
   extraReducers: builder => {
     builder.addCase(Login.fulfilled, (state,action)=>{
         state.auth = action.payload.auth
+        state.user = action.payload.userid
         state.username = action.payload.username
         state.email = action.payload.email
     })
