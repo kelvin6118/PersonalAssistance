@@ -99,7 +99,7 @@ What you need before installing the application.
 Here's the step to install the application into your local device
 
 
-1. Clone the repo
+Clone the repo
    ```sh
    git clone git@github.com:kelvin6118/PersonalAssistance.git
    ```
