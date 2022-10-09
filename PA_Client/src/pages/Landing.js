@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
-import { userLogin} from '../utlis/User';
 import {useSelector, useDispatch} from 'react-redux';
 import { Login } from '../redux/loginSlice';
 
