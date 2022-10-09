@@ -13,7 +13,6 @@ async function display(req, res) {
 
 async function registerRequest(req, res){
     try {
-        console.log(req.body);
         const salt = await bcrypt.genSalt();
         const hashed = await bcrypt.hash(req.body.password, salt)
         const user = await User.create({
