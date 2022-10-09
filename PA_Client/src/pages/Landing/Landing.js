@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom';
-import { userLogin} from '../utlis/User';
+import { userLogin} from '../../utlis/User';
 
 function Landing() {
     const [loginUser, setLoginUser] = useState();
