@@ -11,6 +11,10 @@ function Landing() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+    useEffect(()=>{
+        sessionStorage.clear();
+    },[])
+
     const handleLoginSubmit= async (e) => {
         e.preventDefault();
         const User = {
@@ -18,7 +22,6 @@ function Landing() {
             password: loginPass
             
         }
-        
         dispatch(Login(User)).then((response) => {
             if(sessionStorage.getItem('auth') == "true"){
                 navigate('/dashboard');
