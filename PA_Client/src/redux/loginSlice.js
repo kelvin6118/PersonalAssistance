@@ -8,12 +8,9 @@ export const Login = createAsyncThunk(
       return response
     }
   )
-
+  
 const initialState ={
-    auth: false,
-    userid: null,
-    username: null,
-    email: null
+  auth: false
 }
 
 export const loginSlice = createSlice({
@@ -23,11 +20,13 @@ export const loginSlice = createSlice({
 
   },
   extraReducers: builder => {
-    builder.addCase(Login.fulfilled, (state,action)=>{
-        state.auth = action.payload.auth
-        state.userid = action.payload.userid
-        state.username = action.payload.username
-        state.email = action.payload.email
+    builder.addCase(Login.fulfilled, (state,action)=>{     
+      sessionStorage.setItem("token", "Bearer " + action.payload.token);
+      sessionStorage.setItem("userid", action.payload.userid);
+      sessionStorage.setItem("username", action.payload.username);
+      sessionStorage.setItem("auth", action.payload.auth);
+      sessionStorage.setItem("email", action.payload.email);
+      state.auth = action.payload.auth;
     })
   }
 });

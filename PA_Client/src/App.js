@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Landing from './pages/Landing';
 import SignUp from './pages/SignUp';
@@ -7,7 +7,12 @@ import DashBoard from './pages/DashBoard';
 import Page401 from './pages/Page401';
 
 function App() {
-  const auth = useSelector((state) => state.login.auth);
+  const auth = useSelector((state)=>state.login.auth)
+  let [login, setLogin] = useState(false);;
+  
+  useEffect(()=>{
+    setLogin(sessionStorage.getItem('auth'));
+  },[auth])
 
   return (
     <div className="App ">
@@ -15,7 +20,7 @@ function App() {
         <Route path='/' element={<Landing/>}/>
         <Route path='/signup' element={<SignUp/>}/>
         <Route path='/dashboard'
-        element={auth? <DashBoard/>: <Page401/>}/>
+        element={login? <DashBoard/>: <Page401/>}/>
         
       </Routes>
     </div>

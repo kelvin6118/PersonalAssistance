@@ -16,12 +16,11 @@ function Landing() {
         const User = {
             username: loginUser,
             password: loginPass
+            
         }
         
         dispatch(Login(User)).then((response) => {
-            if(response.payload.auth){
-                localStorage.setItem("token", "Bearer " + response.payload.token);
-                console.log(response.payload);
+            if(sessionStorage.getItem('auth') == "true"){
                 navigate('/dashboard');
             }
         }).catch((err)=>{

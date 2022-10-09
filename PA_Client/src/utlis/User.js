@@ -25,5 +25,5 @@ export const userLogin = async (user) => {
 //header for jwt
 const headers = {
     "Content-Type": "application/json",
-    "x-access-token": localStorage.getItem("token")
+    "x-access-token": sessionStorage.getItem("token")
 }
