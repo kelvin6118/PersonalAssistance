@@ -1,10 +1,10 @@
 
 import { configureStore } from '@reduxjs/toolkit'
-import paReducer from './paSlice'
+import loginReducer from './loginSlice'
 
 export const store = configureStore({
   reducer: {
-    pa: paReducer
+    login: loginReducer
   }
 })
 

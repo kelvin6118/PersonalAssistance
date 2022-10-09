@@ -15,8 +15,8 @@ const initialState ={
     email: null
 }
 
-export const paSlice = createSlice({
-  name: 'Personal Assistant',
+export const loginSlice = createSlice({
+  name: 'User Login',
   initialState,
   reducers: {
 
@@ -31,7 +31,7 @@ export const paSlice = createSlice({
 });
 
 // this is for dispatch
-export const { } = paSlice.actions;
+export const { } = loginSlice.actions;
 
 // this is for configureStore
-export default paSlice.reducer;
+export default loginSlice.reducer;

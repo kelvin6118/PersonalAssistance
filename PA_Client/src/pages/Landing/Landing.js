@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { NavLink } from 'react-router-dom';
 import { userLogin} from '../../utlis/User';
 import {useSelector, useDispatch} from 'react-redux';
-import { Login } from '../../redux/paSlice';
+import { Login } from '../../redux/loginSlice';
 
 
 function Landing() {
@@ -18,11 +18,8 @@ function Landing() {
         }
         
         dispatch(Login(User)).then((response) => {
-            console.log(response);
             if(response.payload.auth){
                 localStorage.setItem("token", "Bearer " + response.token);
-                console.log('logged in')
-
             }
         }).catch((err)=>{
             console.log('wrong user or password');
