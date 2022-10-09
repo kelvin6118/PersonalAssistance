@@ -15,7 +15,7 @@ function App() {
   },[auth])
 
   return (
-    <div className="App ">
+    <div className="App bg-sky-400">
       <Routes>
         <Route path='/' element={<Landing/>}/>
         <Route path='/signup' element={<SignUp/>}/>

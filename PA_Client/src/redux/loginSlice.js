@@ -17,7 +17,9 @@ export const loginSlice = createSlice({
   name: 'login',
   initialState,
   reducers: {
-
+    logout:(state, action)=>{
+      state.auth = false;
+    }
   },
   extraReducers: builder => {
     builder.addCase(Login.fulfilled, (state,action)=>{     
@@ -32,7 +34,7 @@ export const loginSlice = createSlice({
 });
 
 // this is for dispatch
-export const { } = loginSlice.actions;
+export const { logout } = loginSlice.actions;
 
 // this is for configureStore
 export default loginSlice.reducer;

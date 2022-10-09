@@ -21,7 +21,7 @@ function SignUp() {
   return (
     <div className='w-screen h-screen flex justify-center'>
         <div className='w-[500px] h-screen flex flex-col justify-center'>
-            <h3 className='w-full text-2xl bg-cyan-300 p-5'>
+            <h3 className='w-full rounded-t-2xl text-2xl bg-cyan-300 p-5'>
                 Create account
             </h3>
             <form
