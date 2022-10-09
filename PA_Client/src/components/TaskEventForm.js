@@ -3,11 +3,22 @@ import React , {useState} from 'react'
 const TaskEventForm = () => {
   const [type, setType] = useState('task');
   const [title, setTitle] = useState();
-  const [description, setDescription] = useState();
-  const [deadline, setDeadline] = useState();
+  const [description, setDescription] = useState(null);
+  const [date, setDate] = useState();
+  const [time, setTime] = useState(null);
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
+    const data = {
+      userid: parseInt(sessionStorage.getItem('userid')),
+      type: type,
+      title: title,
+      description: description,
+      date: date,
+      time: time
+    }
+
+    console.log(data);
   }
 
   return (
@@ -37,25 +48,21 @@ const TaskEventForm = () => {
           <input 
           type="text"
           placeholder='description'
-          required={true}
           onChange={(e)=>setDescription(e.target.value)}
           />
           {type === 'task'? <label>Deadline</label>:<label>Date</label>}
           <input 
-          type="text"
-          placeholder='DD/MM/YYYY'
+          type="date"
           required={true}
-          onChange={(e)=>setDeadline(e.target.value)}
+          onChange={(e)=>setDate(e.target.value)}
           />
           {
             type === 'event'?
             <>
             <label>Time</label>
             <input 
-            type="text"
-            placeholder='24:00'
-            required={true}
-            onChange={(e)=>setDeadline(e.target.value)}/>
+            type="time"
+            onChange={(e)=>setTime(e.target.value)}/>
             </>:
             false
           }
