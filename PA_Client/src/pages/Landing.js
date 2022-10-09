@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
-import { Login } from '../redux/loginSlice';
+import { Login, logout } from '../redux/loginSlice';
 
 
 function Landing() {
@@ -12,6 +12,7 @@ function Landing() {
 
     useEffect(()=>{
         sessionStorage.clear();
+        dispatch(logout());
     },[])
 
     const handleLoginSubmit= async (e) => {
@@ -33,8 +34,8 @@ function Landing() {
 
     return (
         <div className='w-screen flex justify-center'>
-            <div className='w-fit h-screen flex flex-col justify-center '>
-                <h1 className='w-fit text-2xl bg-cyan-300 p-5'>Welcome To Personal Assistant</h1>
+            <div className='w-[500px] h-screen flex flex-col justify-center '>
+                <h1 className='w-full text-2xl rounded-t-2xl bg-cyan-300 p-5'>Welcome To Personal Assistant</h1>
                 <form 
                 className='w-full bg-teal-300 flex flex-col p-5 space-y-4 '
                 onSubmit={handleLoginSubmit}>
@@ -58,7 +59,7 @@ function Landing() {
                     className='bg-teal-500'
                     type='submit'>Login</button>
                     </form>
-                    <div className='flex justify-between p-5 pt-0 w-full bg-teal-300'>
+                    <div className='flex  justify-between p-5 pt-0 w-full bg-teal-300'>
                         <h3
                         className=''
                         >Not have an account yet?</h3>
