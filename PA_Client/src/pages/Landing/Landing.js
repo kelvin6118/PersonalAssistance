@@ -1,10 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { NavLink } from 'react-router-dom';
 import { userLogin} from '../../utlis/User';
+import {useSelector, useDispatch} from 'react-redux';
+import { Login } from '../../redux/paSlice';
+
 
 function Landing() {
     const [loginUser, setLoginUser] = useState();
-    const [loginPass, setLoginPass] = useState(); 
+    const [loginPass, setLoginPass] = useState();
+    const dispatch = useDispatch();
 
     const handleLoginSubmit= async (e) => {
         e.preventDefault();
@@ -13,15 +17,18 @@ function Landing() {
             password: loginPass
         }
         
-        userLogin(User).then((response) => {
-            if(response.auth){
+        dispatch(Login(User)).then((response) => {
+            console.log(response);
+            if(response.payload.auth){
                 localStorage.setItem("token", "Bearer " + response.token);
-                console.log("You've logged in", response);
-            }else{
-                console.log("Wrong username or password")
+                console.log('logged in')
+
             }
+        }).catch((err)=>{
+            console.log('wrong user or password');
         })
     }
+
 
     return (
         <div className='w-screen flex justify-center'>

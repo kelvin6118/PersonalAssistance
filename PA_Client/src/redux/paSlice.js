@@ -1,9 +1,18 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { userLogin} from '../utlis/User';
+
+export const Login = createAsyncThunk(
+    '/user/login',
+    async (User) => {
+      const response = await userLogin(User);
+      return response
+    }
+  )
 
 const initialState ={
     auth: false,
-    userid: null,
-    username: null
+    username: null,
+    email: null
 }
 
 export const paSlice = createSlice({
@@ -12,10 +21,17 @@ export const paSlice = createSlice({
   reducers: {
 
   },
+  extraReducers: builder => {
+    builder.addCase(Login.fulfilled, (state,action)=>{
+        state.auth = action.payload.auth
+        state.username = action.payload.username
+        state.email = action.payload.email
+    })
+  }
 });
 
 // this is for dispatch
-export const { addTodo } = paSlice.actions;
+export const { } = paSlice.actions;
 
 // this is for configureStore
 export default paSlice.reducer;
