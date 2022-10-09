@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { userLogin} from '../utlis/User';
 import {useSelector, useDispatch} from 'react-redux';
 import { Login } from '../redux/loginSlice';
@@ -9,6 +9,7 @@ function Landing() {
     const [loginUser, setLoginUser] = useState();
     const [loginPass, setLoginPass] = useState();
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleLoginSubmit= async (e) => {
         e.preventDefault();
@@ -20,6 +21,7 @@ function Landing() {
         dispatch(Login(User)).then((response) => {
             if(response.payload.auth){
                 localStorage.setItem("token", "Bearer " + response.token);
+                //navigate('/dashboard');
             }
         }).catch((err)=>{
             console.log('wrong user or password');
