@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest --setupFiles ./test/config.js --watchAll --detectOpenHandles --runInBand --verbose",
+    "coverage": "jest --setupFiles ./test/config.js --watchAll --detectOpenHandles --coverage"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +18,10 @@
     "express": "^4.18.1",
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "jest": "^29.1.2",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.0"
   }
 }
