@@ -1,5 +1,5 @@
-const Task = require("../models/Tasks");
-const Event = require("../models/Events");
+const Task = require("../models/Task");
+const Event = require("../models/Event");
 
 
 async function createRequest(req, res){
