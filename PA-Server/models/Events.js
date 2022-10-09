@@ -25,4 +25,16 @@ module.exports = class Event {
             }
         });
     }
+
+    static findByUserId(userID){
+        return new Promise (async (resolve, reject) => {
+            try {
+                const result = await db.query('SELECT * FROM events WHERE userid = $1;', [ userID ]);
+                let events = new Event(result.rows[0]);
+                resolve(events);
+            } catch (err) {
+                reject('User not found!');
+            }
+        })
+    }
 };
