@@ -1,4 +1,5 @@
 import React , {useState} from 'react'
+import { createTaskEvent } from '../utlis/CreateTaskEvent';
 
 const TaskEventForm = () => {
   const [type, setType] = useState('task');
@@ -18,7 +19,9 @@ const TaskEventForm = () => {
       time: time
     }
 
-    console.log(data);
+    createTaskEvent(data).then((response)=>{
+      console.log(response);
+    })
   }
 
   return (
