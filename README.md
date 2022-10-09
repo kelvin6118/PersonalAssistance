@@ -116,6 +116,7 @@ Here's the step to install the application into your local device
    ```sh
    npm start
    ```
+
    Server:
 1. Get to the server folder
    ```sh
