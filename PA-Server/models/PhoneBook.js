@@ -15,7 +15,7 @@ module.exports = class PhoneBook {
         return new Promise (async (resolve, reject) => {
             try {
                 const { userid, name, title, phone, email} = userData;
-                let newContact = await db.query('INSERT INTO phonebook (userid, name, title, phone) VALUES ($1,$2,$3,$4,$5) RETURNING *;',[userid, name, title, phone, email]);
+                let newContact = await db.query('INSERT INTO phonebook (userid, name, title, phone, email) VALUES ($1,$2,$3,$4,$5) RETURNING *;',[userid, name, title, phone, email]);
                 let result = new PhoneBook(newContact.rows[0]);
                 resolve (result);
                 
