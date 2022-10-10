@@ -180,7 +180,7 @@ Use this space to list resources you find helpful and would like to give credit 
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [product-screenshot]: https://user-images.githubusercontent.com/98923218/194867507-1f4fa4f2-b435-470d-9d5b-5a1e037e00bb.png
-[Redux.js]: https://img.shields.io/badge/redux-lastest-purple
+[Redux.js]: https://img.shields.io/badge/Redux-lastest-purple
 [Redux-url]: https://redux.js.org/
 [React.js]: https://img.shields.io/badge/React-latest-cyan
 [React-url]: https://reactjs.org/
