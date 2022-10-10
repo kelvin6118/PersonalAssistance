@@ -1,4 +1,5 @@
 import React , {useState}from 'react'
+import { createNewContact } from '../utlis/PhoneBook';
 
 const PhoneBookForm = () => {
   const [name, setName] = useState('task');
@@ -12,11 +13,13 @@ const PhoneBookForm = () => {
       userid: parseInt(sessionStorage.getItem('userid')),
       name: name,
       title: title,
-      number: number,
+      phone: number,
       email: email,
     }
 
-    console.log(data);
+    createNewContact(data).then((response)=>{
+      console.log(response);
+    })
   }
 
   return (
@@ -48,6 +51,7 @@ const PhoneBookForm = () => {
           <label>Number</label>
           <input 
           type="text"
+          maxLength={15}
           placeholder='number'
           onChange={(e)=>setNumber(e.target.value)}
           />
