@@ -34,7 +34,7 @@ function DashBoard() {
       </div>
       </div>
 
-      <div className='flex justify-between'>
+      <div className='flex justify-between space-x-5'>
         {content == 'calendar'? <Calendar/>: <PhoneBook/>}
         {content == 'calendar'? <TaskEventForm/>: <PhoneBookForm/>}
       </div>
