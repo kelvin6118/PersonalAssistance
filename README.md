@@ -75,6 +75,7 @@ Data Structure: https://excalidraw.com/#json=9jlRitAi5Ql5DS_oPoduU,4t3l3_5Vw6UXL
 Technology stack
 
 * [![React][React.js]][React-url]
+* [![Redux][Redux.js]][Redux-url]
 * [![Node][Node.js]][Node-url]
 * [![Tailwind CSS][TailwindCSS]][Tailwind-url]
 
@@ -179,7 +180,8 @@ Use this space to list resources you find helpful and would like to give credit 
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [product-screenshot]: https://user-images.githubusercontent.com/98923218/194867507-1f4fa4f2-b435-470d-9d5b-5a1e037e00bb.png
-
+[Redux.js]: https://img.shields.io/badge/redux-lastest-purple
+[Redux-url]: https://redux.js.org/
 [React.js]: https://img.shields.io/badge/React-latest-cyan
 [React-url]: https://reactjs.org/
 [Node.js]: https://img.shields.io/badge/Node-latest-green
