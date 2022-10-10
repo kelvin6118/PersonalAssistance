@@ -153,8 +153,8 @@ Server:
 - [x] Data Structure Design
 - [x] bit.io database integration
 - [x] User Account Feature
-- [ ] User's Dashboard Feature
-- [ ] User's Phonebook
+- [x] User's Dashboard Feature
+- [x] User's Phonebook
 - [ ] Email reminder
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
