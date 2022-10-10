@@ -155,6 +155,8 @@ Server:
 - [x] User Account Feature
 - [x] User's Dashboard Feature
 - [x] User's Phonebook
+- [ ] Update/Delete Task/Event
+- [ ] Update/Delete Contact in PhoneBook
 - [ ] Email reminder
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
