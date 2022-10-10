@@ -176,7 +176,7 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[product-screenshot]: https://user-images.githubusercontent.com/98923218/194867143-bc09b073-ed0d-45fd-bd3c-a7a55dcf8d05.png
+[product-screenshot]: https://user-images.githubusercontent.com/98923218/194867507-1f4fa4f2-b435-470d-9d5b-5a1e037e00bb.png
 
 [React.js]: https://img.shields.io/badge/React-latest-cyan
 [React-url]: https://reactjs.org/
