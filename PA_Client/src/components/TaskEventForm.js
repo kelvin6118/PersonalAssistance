@@ -25,7 +25,7 @@ const TaskEventForm = () => {
   }
 
   return (
-    <div>
+    <section>
       <h1
       className='w-full text-2xl rounded-t-2xl bg-cyan-300 p-5'
       >
@@ -73,8 +73,7 @@ const TaskEventForm = () => {
           className='bg-teal-500'
           type='submit'>Create</button>
         </form>
-      
-      </div>
+      </section>
   )
 }
 
