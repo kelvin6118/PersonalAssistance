@@ -2,3 +2,8 @@
 Progress: Yesterday I've finished simple user authentication for the app
 Goal: Today I am going to finish the login and sign page. Unit test my current code. Posssibly Start working on the Dashboard.
 Blocker: Currently no blocker
+
+10-10-2022
+Progress: In terms of feature, the Application is almost done. In terms of testing, the backend program can be tested easily.
+Goal: Today I am going to finish off the Dashboard, hopefully the PhoneBook aswell.
+Blocker: Frontend testing is not successful. Trying to find the problems.
