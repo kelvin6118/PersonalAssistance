@@ -30,10 +30,10 @@ module.exports = class Event {
         return new Promise (async (resolve, reject) => {
             try {
                 const result = await db.query('SELECT * FROM events WHERE userid = $1;', [ userID ]);
-                let events = new Event(result.rows[0]);
+                let events = result.rows.map(e => ({...new Event(e)}));
                 resolve(events);
             } catch (err) {
-                reject('User not found!');
+                reject('Events not found!');
             }
         })
     }

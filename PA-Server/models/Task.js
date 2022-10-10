@@ -29,10 +29,12 @@ module.exports = class Task {
         return new Promise (async (resolve, reject) => {
             try {
                 const result = await db.query('SELECT * FROM tasks WHERE userid = $1;', [ userID ]);
-                let tasks = new Task(result.rows[0]);
+                let tasks = result.rows.map(t => ({
+                    ...new Task(t)
+                }))
                 resolve(tasks);
             } catch (err) {
-                reject('User not found!');
+                reject('Tasks not found!');
             }
         })
     }
