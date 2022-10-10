@@ -8,6 +8,7 @@ const userRoutes = require('./routes/usersRoutes');
 const newTaskEventRoute = require('./routes/newTaskEventRoute');
 const eventRoute = require('./routes/eventsRoutes');
 const taskRoute = require('./routes/tasksRoutes');
+const phoneBookRoute = require('./routes/phoneBookRoutes');
 
 server.use(cors());
 server.use(express.json());
@@ -16,6 +17,7 @@ server.use('/user', userRoutes);
 server.use('/create', newTaskEventRoute);
 server.use('/event', eventRoute);
 server.use('/task', taskRoute);
+server.use('/phonebook', phoneBookRoute);
 
 
 server.get('/', (req, res) => res.send('Welcome to Personal Assistant 😊'))
