@@ -49,7 +49,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://kelvin-personal-assistant.netlify.app/)
 
 Have you ever had your most busy period and having trouble to maintain your task management?<br>
 Then you should definitely try this personal assistance. Why?
@@ -176,7 +176,7 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: ![image](https://user-images.githubusercontent.com/98923218/194867143-bc09b073-ed0d-45fd-bd3c-a7a55dcf8d05.png)
 
 [React.js]: https://img.shields.io/badge/React-latest-cyan
 [React-url]: https://reactjs.org/
