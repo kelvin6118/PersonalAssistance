@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import { getUserEvents } from '../utlis/Event';
 import { getUserTasks } from '../utlis/Task';
+import EventCard from './EventCard';
 import TaskCard from './TaskCard';
 
 const Calendar = () => {
@@ -10,7 +12,16 @@ const Calendar = () => {
   const getTasks = async () => {
     getUserTasks(userid).then(
       (response)=>{
-        setTasks([...response]);
+        setTasks(response);
+      }
+      
+    )
+  }
+
+  const getEvents = async () => {
+    getUserEvents(userid).then(
+      (response)=>{
+        setEvents(response);
       }
       
     )
@@ -18,14 +29,15 @@ const Calendar = () => {
 
   useEffect(()=>{
     getTasks();
+    getEvents();
   },[])
 
 
 
   return (
-    <div className='flex w-full space-x-2'>
+    <div className='flex w-full space-x-4 box-border'>
       <section className='w-[50%] space-y-3'>
-        <h1>Task</h1>
+        <h1 className='text-2xl'>Task</h1>
         <main className='space-y-2'>
           {
           tasks?.sort(function(a,b){
@@ -34,8 +46,15 @@ const Calendar = () => {
           }
         </main>
       </section>
-      <section>
-        <h1>Event</h1>
+      <section className='w-[50%] space-y-3'>
+        <h1 className='text-2xl'>Event</h1>
+        <main className='space-y-2'>
+          {
+          events?.sort(function(a,b){
+            return new Date(a.date) - new Date(b.date);
+          }).map(e=>(<EventCard event={e} />))
+          }
+        </main>
       </section>
     </div>
   )

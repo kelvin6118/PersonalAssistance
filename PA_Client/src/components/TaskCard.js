@@ -6,15 +6,18 @@ const TaskCard = (task) => {
     const deadline = task.task.deadline.substring(0, 10);
 
   return (
-    <section className=''>
+    <section className='TaskCard'>
         <head className='w-full flex justify-between'>
-            <h1>{title}</h1>
-            <p>{deadline}</p>
+            <h1 className='text-xl'>{title}</h1>
+            <div>
+                <h2>Deadline</h2>
+                <p>{deadline}</p>
+            </div>
         </head>
-        <main className='space-x-5'>
-            <p>{description}</p>
-
-        </main>
+        {description? <main className='space-x-5'>
+            <p className='whitespace-normal'>{description}</p>
+        </main>:false
+        }
     </section>
   )
 }
