@@ -1,6 +1,8 @@
+import apiURL from './apiURL'
+
 export const createNewContact = async (data) => {
 
-    const response = await fetch('http://localhost:3001/phonebook', {
+    const response = await fetch(`${apiURL}/phonebook`, {
         headers: { "Content-Type": "application/json" },
         method: 'POST', 
         body: JSON.stringify(data)
@@ -13,7 +15,7 @@ export const createNewContact = async (data) => {
 
 export const getUserPhoneBook = async (id) => {
     try {
-        const response = await fetch(`http://localhost:3001/phonebook/${id}`);
+        const response = await fetch(`${apiURL}/phonebook/${id}`);
         const info = await response.json()
         return info
     } catch (err) {

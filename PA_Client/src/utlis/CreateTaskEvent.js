@@ -1,6 +1,8 @@
+import apiURL from './apiURL'
+
 export const createTaskEvent = async (data) => {
 
-    const response = await fetch('http://localhost:3001/create', {
+    const response = await fetch(`${apiURL}/create`, {
         headers: { "Content-Type": "application/json" },
         method: 'POST', 
         body: JSON.stringify(data)

@@ -1,6 +1,8 @@
+import apiURL from './apiURL'
+
 export const registerUser = async (user) => {
 
-    const response = await fetch('http://localhost:3001/user', {
+    const response = await fetch(`${apiURL}/user`, {
         headers: { "Content-Type": "application/json" },
         method: 'POST', 
         body: JSON.stringify(user)
@@ -12,7 +14,7 @@ export const registerUser = async (user) => {
 
 export const userLogin = async (user) => {
 
-    const response = await fetch('http://localhost:3001/user/login', {
+    const response = await fetch(`${apiURL}/user/login`, {
         headers: { "Content-Type": "application/json" },
         method: 'POST', 
         body: JSON.stringify(user)
