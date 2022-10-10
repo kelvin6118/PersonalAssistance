@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import {CalendarIcon, BookOpenIcon, ArrowLeftOnRectangleIcon} from '@heroicons/react/24/outline'
 import { useNavigate } from 'react-router-dom';
-import Calendar from '../components/Calendar';
-import PhoneBook from '../components/PhoneBook';
-import TaskEventForm from '../components/TaskEventForm';
-import PhoneBookForm from '../components/PhoneBookForm';
+import Calendar from '../components/Calendar/Calendar';
+import PhoneBook from '../components/PhoneBook/PhoneBook';
+import TaskEventForm from '../components/Calendar/TaskEventForm';
+import PhoneBookForm from '../components/PhoneBook/PhoneBookForm';
 
 function DashBoard() {
   const [content, setContent] = useState('calendar');

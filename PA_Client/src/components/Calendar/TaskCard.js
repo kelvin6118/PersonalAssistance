@@ -7,13 +7,13 @@ const TaskCard = (task) => {
 
   return (
     <section className='TaskCard'>
-        <head className='w-full flex justify-between'>
+        <header className='w-full flex justify-between'>
             <h1 className='text-xl'>{title}</h1>
             <div>
                 <h2>Deadline</h2>
                 <p>{deadline}</p>
             </div>
-        </head>
+        </header>
         {description? <main className='space-x-5'>
             <p className='whitespace-normal'>{description}</p>
         </main>:false
