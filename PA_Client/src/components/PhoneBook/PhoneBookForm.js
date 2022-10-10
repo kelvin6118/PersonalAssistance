@@ -58,6 +58,7 @@ const PhoneBookForm = () => {
           <label>email</label>
           <input 
           type="email"
+          placeholder='example@gmail.com'
           onChange={(e)=>setEmail(e.target.value)}
           />
 

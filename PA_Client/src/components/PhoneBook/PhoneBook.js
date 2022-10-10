@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getUserPhoneBook } from '../../utlis/PhoneBook';
+import PhoneBookCard from './PhoneBookCard';
 
 const PhoneBook = () => {
   const userid = parseInt(sessionStorage.getItem('userid'));
@@ -10,7 +11,6 @@ const PhoneBook = () => {
       (response)=>{
         setContacts(response);
       }
-      
     )
   }
 
@@ -21,10 +21,12 @@ const PhoneBook = () => {
 
   return (
     <section>
-      <header>
-        <h1>Contacts</h1>
+      <header className='p-2 w-full'>
+        <h1 className='text-2xl'>Contacts</h1>
       </header>
-      
+      <main>
+        {contacts?.map((c)=>(<PhoneBookCard contact={c}/>))}
+      </main>
     </section>
   )
 }
