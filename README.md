@@ -12,7 +12,7 @@
   <p align="center">
     A Personal Assistance to help task management!
     <br />
-    <a href="">View Demo</a>
+    <a href="https://kelvin-personal-assistant.netlify.app/">View Demo</a>
   </p>
 </div>
 
