@@ -37,8 +37,8 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#extra-feature">Extra Features</a></li>
-    <li><a href="#project-logs">Project </a></li>
+    <li><a href="#extra-features">Extra Features</a></li>
+    <li><a href="#project-logs">Project Logs</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
