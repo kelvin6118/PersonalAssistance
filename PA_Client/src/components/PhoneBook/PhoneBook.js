@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getUserPhoneBook } from '../../utlis/PhoneBook';
+import { getUserPhoneBook } from '../../utlis/api/PhoneBook';
 import PhoneBookCard from './PhoneBookCard';
 
 const PhoneBook = () => {

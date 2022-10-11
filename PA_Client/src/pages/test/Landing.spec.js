@@ -1,7 +1,7 @@
 import {render, screen, waitFor} from '@testing-library/react'
 import React from 'react'
 import user from '@testing-library/user-event'
-import renderConnected from './utils/renderConnect'
+import renderConnected from '../../utlis/test/renderConnect'
 import App from '../../App'
 import Landing from '../Landing'
 

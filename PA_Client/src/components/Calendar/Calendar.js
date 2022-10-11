@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { getUserEvents } from '../../utlis/Event';
-import { getUserTasks } from '../../utlis/Task';
+import { getUserEvents } from '../../utlis/api/Event';
+import { getUserTasks } from '../../utlis/api/Task';
 import EventCard from './EventCard';
 import TaskCard from './TaskCard';
 

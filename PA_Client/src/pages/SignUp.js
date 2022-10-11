@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom';
-import { registerUser } from '../utlis/User';
+import { registerUser } from '../utlis/api/User';
 
 function SignUp() {
     const [createUser, setCreateUser] = useState();
