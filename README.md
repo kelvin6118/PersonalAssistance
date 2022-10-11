@@ -79,6 +79,10 @@ Technology stack
 * [![Tailwind CSS][TailwindCSS]][Tailwind-url]
 * [![Jest][Jest.js]][Jest-url]
 
+### Deploy Services
+Client: Netlify
+Server: Heroku
+Database: Bit.io
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
