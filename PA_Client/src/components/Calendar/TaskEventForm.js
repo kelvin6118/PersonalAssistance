@@ -29,7 +29,7 @@ const TaskEventForm = () => {
       <h1
       className='w-full text-2xl rounded-t-2xl bg-cyan-300 p-5'
       >
-        Create {type === "task"? <span>Task</span>: <span>Event</span>}</h1>
+        Create{type === "task"? <span>Task</span>: <span>Event</span>}</h1>
       <form 
         className='w-full rounded-b-2xl bg-teal-300 flex flex-col p-5 space-y-4 '
         onSubmit={handleLoginSubmit}>
@@ -56,6 +56,7 @@ const TaskEventForm = () => {
           {type === 'task'? <label>Deadline</label>:<label>Date</label>}
           <input 
           type="date"
+          id='datePicker'
           required={true}
           onChange={(e)=>setDate(e.target.value)}
           />

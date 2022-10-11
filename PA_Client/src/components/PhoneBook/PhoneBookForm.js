@@ -35,7 +35,7 @@ const PhoneBookForm = () => {
           <input 
           type="text"
           maxLength={50}
-          placeholder='Title'
+          placeholder='Name'
           required={true}
           onChange={(e)=>setName(e.target.value)}
           />
