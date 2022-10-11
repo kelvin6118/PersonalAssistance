@@ -7,3 +7,8 @@ Blocker: Currently no blocker
 Progress: In terms of feature, the Application is almost done. In terms of testing, the backend program can be tested easily.
 Goal: Today I am going to finish off the Dashboard, hopefully the PhoneBook aswell.
 Blocker: Frontend testing is not successful. Trying to find the problems.
+
+11-10-2022
+Progress: Minimal viable product has been finished. All feature has been done. Testing for the backend is good.
+Goal: Today I will try to get a higher testing coverage on the frontend, css style the application, and possibily to enhance some feature,
+Blocker: Frontend testing. It's hard to test some of the component base on the code.
