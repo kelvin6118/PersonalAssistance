@@ -175,7 +175,9 @@ Server:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Project Logs
 
+[logs](log.txt)
 
 
 <!-- ACKNOWLEDGMENTS -->
