@@ -1,4 +1,4 @@
-import apiURL from './apiURL'
+import {apiURL} from './apiURL'
 
 export const registerUser = async (user) => {
 
@@ -24,8 +24,3 @@ export const userLogin = async (user) => {
     return data;
 }
 
-//header for jwt
-const headers = {
-    "Content-Type": "application/json",
-    "x-access-token": sessionStorage.getItem("token")
-}

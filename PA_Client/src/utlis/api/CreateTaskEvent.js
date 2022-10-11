@@ -1,9 +1,9 @@
-import apiURL from './apiURL'
+import {apiURL, jwtHeaders} from './apiURL'
 
 export const createTaskEvent = async (data) => {
 
     const response = await fetch(`${apiURL}/create`, {
-        headers: { "Content-Type": "application/json" },
+        headers: jwtHeaders,
         method: 'POST', 
         body: JSON.stringify(data)
     });

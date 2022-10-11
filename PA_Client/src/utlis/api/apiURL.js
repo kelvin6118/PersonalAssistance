@@ -1,4 +1,9 @@
 
-const apiURL = 'https://kelvin-personal-assistant.herokuapp.com' || 'http://localhost:3001';
+const apiURL =  'http://localhost:3001'|| 'https://kelvin-personal-assistant.herokuapp.com';
 
-module.exports = apiURL;
+const jwtHeaders = {
+    "Content-Type": "application/json" ,
+    "x-access-token": sessionStorage.getItem("token")
+}
+
+module.exports = {apiURL, jwtHeaders};

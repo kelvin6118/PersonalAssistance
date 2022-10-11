@@ -1,9 +1,9 @@
-import apiURL from './apiURL'
+import {apiURL, jwtHeaders} from './apiURL'
 
 export const createNewContact = async (data) => {
 
     const response = await fetch(`${apiURL}/phonebook`, {
-        headers: { "Content-Type": "application/json" },
+        headers: jwtHeaders,
         method: 'POST', 
         body: JSON.stringify(data)
     });
@@ -15,7 +15,7 @@ export const createNewContact = async (data) => {
 
 export const getUserPhoneBook = async (id) => {
     try {
-        const response = await fetch(`${apiURL}/phonebook/${id}`);
+        const response = await fetch(`${apiURL}/phonebook/${id}`, {headers: jwtHeaders});
         const info = await response.json()
         return info
     } catch (err) {

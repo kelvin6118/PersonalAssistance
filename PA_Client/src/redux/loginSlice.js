@@ -23,7 +23,7 @@ export const loginSlice = createSlice({
   },
   extraReducers: builder => {
     builder.addCase(Login.fulfilled, (state,action)=>{     
-      sessionStorage.setItem("token", "Bearer " + action.payload.token);
+      sessionStorage.setItem("token", action.payload.token);
       sessionStorage.setItem("userid", action.payload.userid);
       sessionStorage.setItem("username", action.payload.username);
       sessionStorage.setItem("auth", action.payload.auth);
