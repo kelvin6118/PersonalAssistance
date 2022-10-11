@@ -37,9 +37,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#extra-feature">Extra Features</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -78,6 +76,7 @@ Technology stack
 * [![Redux][Redux.js]][Redux-url]
 * [![Node][Node.js]][Node-url]
 * [![Tailwind CSS][TailwindCSS]][Tailwind-url]
+* [![Jest][Jest.js]][Jest-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -131,6 +130,11 @@ Server:
    ```sh
    npm start
    ```
+   <br>
+   Optional: You can run test on both Client and Server
+   ```sh
+   npm test
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -139,9 +143,13 @@ Server:
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-- create account
-- sign in
-- add task/event to account
+- Click on the Sign up button to navigate to the sign up page
+- Sign up an account on the Sign up page
+- Login on the main page
+- On user dashboard, you can select calendar or phonebook by clicking the nav icon
+- You can create new task or event on the calendar
+- You can create new contact on the phonebook
+- You can logout by closing the browser or clicking the logout button on the top right.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -158,7 +166,12 @@ Server:
 - [x] User's Phonebook
 - [ ] Update/Delete Task/Event
 - [ ] Update/Delete Contact in PhoneBook
+
+
+## Extra Features
+- [ ] Email Validation
 - [ ] Email reminder
+- [ ] Enhance display by using calendar
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -188,3 +201,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [Node-url]: https://nodejs.org/en/
 [TailwindCSS]: https://img.shields.io/badge/TailwindCSS-latest-cyan
 [Tailwind-url]: https://tailwindcss.com/
+[Jest.js]: https://img.shields.io/badge/jest-latest-orange
+[Jest-url]: https://jestjs.io/
