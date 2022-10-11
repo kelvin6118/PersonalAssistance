@@ -5,7 +5,7 @@ const verifyJWT = require('./verifyJWT')
 const taskController = require('../controllers/tasksController');
 
 
-router.get('/:id', taskController.getTasks);
+router.get('/:id', verifyJWT ,taskController.getTasks);
 
 
 module.exports = router;

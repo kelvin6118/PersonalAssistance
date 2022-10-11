@@ -4,7 +4,7 @@ const verifyJWT = require('./verifyJWT')
 
 const phoneBookController = require('../controllers/phoneBookController');
 
-router.post('/', phoneBookController.createRequest);
-router.get('/:id', phoneBookController.getContacts);
+router.post('/', verifyJWT, phoneBookController.createRequest);
+router.get('/:id', verifyJWT, phoneBookController.getContacts);
 
 module.exports = router;

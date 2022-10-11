@@ -5,7 +5,7 @@ const verifyJWT = require('./verifyJWT')
 const eventController = require('../controllers/eventsController');
 
 
-router.get('/:id', eventController.getEvents);
+router.get('/:id', verifyJWT, eventController.getEvents);
 
 
 

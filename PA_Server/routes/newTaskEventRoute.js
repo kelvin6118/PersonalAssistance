@@ -5,7 +5,7 @@ const verifyJWT = require('./verifyJWT')
 const newTaskEventController = require('../controllers/newTaskEventController');
 
 
-router.post('/', newTaskEventController.createRequest);
+router.post('/', verifyJWT, newTaskEventController.createRequest);
 
 
 
