@@ -201,5 +201,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [Node-url]: https://nodejs.org/en/
 [TailwindCSS]: https://img.shields.io/badge/TailwindCSS-latest-cyan
 [Tailwind-url]: https://tailwindcss.com/
-[Jest.js]: https://img.shields.io/badge/jest-latest-orange
+[Jest.js]: https://img.shields.io/badge/Jest-latest-orange
 [Jest-url]: https://jestjs.io/
