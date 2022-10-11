@@ -1,46 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import { getUserEvents } from '../../utlis/api/Event';
-import { getUserTasks } from '../../utlis/api/Task';
+import React from 'react';
 import EventCard from './EventCard';
 import TaskCard from './TaskCard';
 
-const Calendar = () => {
-  const userid = parseInt(sessionStorage.getItem('userid'));
-  const [tasks, setTasks] = useState();
-  const [events, setEvents] = useState();
-
-  const getTasks = async () => {
-    getUserTasks(userid).then(
-      (response)=>{
-        setTasks(response);
-      }
-      
-    )
-  }
-
-  const getEvents = async () => {
-    getUserEvents(userid).then(
-      (response)=>{
-        setEvents(response);
-      }
-      
-    )
-  }
-
-  useEffect(()=>{
-    getTasks();
-    getEvents();
-  },[])
-
-
-
+const Calendar = (tasks, events) => {
   return (
     <div className='flex w-full space-x-4 box-border'>
       <section className='w-[50%] space-y-3'>
         <h1 className='text-2xl'>Task</h1>
         <main className='space-y-2'>
           {
-          tasks?.sort(function(a,b){
+          tasks.tasks?.sort(function(a,b){
             return new Date(a.deadline) - new Date(b.deadline);
           }).map(t=>(<TaskCard task={t} />))
           }
@@ -50,7 +19,7 @@ const Calendar = () => {
         <h1 className='text-2xl'>Event</h1>
         <main className='space-y-2'>
           {
-          events?.sort(function(a,b){
+          events.events?.sort(function(a,b){
             return new Date(a.date) - new Date(b.date);
           }).map(e=>(<EventCard event={e} />))
           }

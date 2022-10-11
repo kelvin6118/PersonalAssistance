@@ -1,15 +1,43 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {CalendarIcon, BookOpenIcon, ArrowLeftOnRectangleIcon} from '@heroicons/react/24/outline'
 import { useNavigate } from 'react-router-dom';
 import Calendar from '../components/Calendar/Calendar';
 import PhoneBook from '../components/PhoneBook/PhoneBook';
 import TaskEventForm from '../components/Calendar/TaskEventForm';
-import PhoneBookForm from '../components/PhoneBook/PhoneBookForm';
+import PhoneBookForm from '../components/PhoneBook/PhoneBookForm'
+import { getUserEvents } from '../utlis/api/Event';
+import { getUserTasks } from '../utlis/api/Task';;
 
-function DashBoard() {
-  const [content, setContent] = useState('calendar');
+function DashBoard() {  
   const user = sessionStorage.getItem('username');
+  const userid = parseInt(sessionStorage.getItem('userid'));
+  const [content, setContent] = useState('calendar');
+  const [tasks, setTasks] = useState();
+  const [events, setEvents] = useState();
   const navigate = useNavigate();
+
+  const getTasks = async () => {
+    getUserTasks(userid).then(
+      (response)=>{
+        setTasks(response);
+      }
+      
+    )
+  }
+
+  const getEvents = async () => {
+    getUserEvents(userid).then(
+      (response)=>{
+        setEvents(response);
+      }
+      
+    )
+  }
+
+  useEffect(()=>{
+    getTasks();
+    getEvents();
+  },[])
 
   return (
     <div className='w-screen h-screen p-7 overflow-hidden space-y-5'>
@@ -35,7 +63,7 @@ function DashBoard() {
       </div>
 
       <div className='flex justify-between space-x-5'>
-        {content == 'calendar'? <Calendar/>: <PhoneBook/>}
+        {content == 'calendar'? <Calendar tasks={tasks} events={events}/>: <PhoneBook/>}
         {content == 'calendar'? <TaskEventForm/>: <PhoneBookForm/>}
       </div>
 
