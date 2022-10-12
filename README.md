@@ -79,6 +79,8 @@ Technology stack
 * [![Node][Node.js]][Node-url]
 * [![Tailwind CSS][TailwindCSS]][Tailwind-url]
 * [![Jest][Jest.js]][Jest-url]
+* [![JWT][JWT]][JWT-url]
+* [![Express][Express.js]][Express-url]
 
 ### Deploy Services
 
@@ -205,13 +207,19 @@ Use this space to list resources you find helpful and would like to give credit 
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [product-screenshot]: https://user-images.githubusercontent.com/98923218/194867507-1f4fa4f2-b435-470d-9d5b-5a1e037e00bb.png
-[Redux.js]: https://img.shields.io/badge/Redux-lastest-purple
+[Redux.js]: https://img.shields.io/badge/Redux-%5E8.0.4-purple
 [Redux-url]: https://redux.js.org/
-[React.js]: https://img.shields.io/badge/React-latest-cyan
+[React.js]: https://img.shields.io/badge/React-%5E18.2.0-cyan
 [React-url]: https://reactjs.org/
-[Node.js]: https://img.shields.io/badge/Node-latest-green
+[Node.js]: https://img.shields.io/badge/Node-16.14.0-green
 [Node-url]: https://nodejs.org/en/
-[TailwindCSS]: https://img.shields.io/badge/TailwindCSS-latest-cyan
+[TailwindCSS]: https://img.shields.io/badge/TailwindCSS-%5E3.1.8-cyan
 [Tailwind-url]: https://tailwindcss.com/
-[Jest.js]: https://img.shields.io/badge/Jest-latest-orange
+[Jest.js]: https://img.shields.io/badge/Jest-%5E27.5.1-orange
 [Jest-url]: https://jestjs.io/
+[JWT]: https://img.shields.io/badge/JWT-%5E8.5.1-green
+[JWT-url]: https://jwt.io/
+[Express.js]: https://img.shields.io/badge/Express-%5E4.18.1-green
+[Express-url]: https://expressjs.com/
+[Bcrypt.js]: https://img.shields.io/badge/Bcrypt-%5E5.1.0-green
+[Bcrypt-url]: https://www.npmjs.com/package/bcrypt
